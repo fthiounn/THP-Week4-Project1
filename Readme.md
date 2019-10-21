@@ -2,6 +2,8 @@ THP - Week4 - Project1 - Franck Sinatra
 
 François THIOUNN
 
+Pour la gestion des commentaires, j'ai choisit de creer une classe commentaires et de les lier aux gossip via leur ID. (car ID etait deja utilisé dans le traitement des gossip)
+Pour retrouver les commentaires relies a un gossip, on recupere tous les commentaires (dans comment.csv) puis on cherche les comments avec l'ID voulue.
 
 
 

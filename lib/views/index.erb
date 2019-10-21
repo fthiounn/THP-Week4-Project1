@@ -3,7 +3,7 @@
     <title>The Gossip Project</title>
   </head>
   <body>
-    <% gossips.each_with_index do |gossip,index| %>
+    <% gossips.each_with_index do |gossip,index| %><!-- On boucle sur le tableau de gossip et on les affiches tous-->
         <p><a href = 'gossips/<%= index %>' >Potin n°<%= index %></a><br/>
         </p>
     <% end %>

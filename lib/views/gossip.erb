@@ -11,11 +11,11 @@
           <a href = '/gossips/<%= id %>/edit' >Modifier le Gossip</a>
         </p>
     <h3>Section commentaires du potin n°<%= id %></h3>
-    <% comments.each_with_index do |comment,index| %>
+    <% comments.each_with_index do |comment,index| %><!-- on boucle sur le tableau des commentaires (recupéré depuis Comment.all_with_id -->
         <p>Comment n°<%= index %> :<br/><%= comment.content %><br/>
         </p>
     <% end %>
-    <form action='/gossips/<%= id%>' method='POST'>
+    <form action='/gossips/<%= id%>' method='POST'><!-- Formulaire nouveau commentaire-->
       Ajoute un commentaire :  <input type='text' name='gossip_comment'/><br/>
       <input type='submit'/>
     </form>
