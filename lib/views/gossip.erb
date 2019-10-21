@@ -7,8 +7,18 @@
     <h3>Voici la page du potin n°<%= id %></h3>
         <p>
           Son Auteur : <%= gossip.author %><br/>
-          Le contenu du potin : <%= gossip.content %>
+          Le contenu du potin : <%= gossip.content %><br/>
+          <a href = '/gossips/<%= id %>/edit' >Modifier le Gossip</a>
         </p>
+    <h3>Section commentaires du potin n°<%= id %></h3>
+    <% comments.each_with_index do |comment,index| %>
+        <p>Comment n°<%= index %> :<br/><%= comment.content %><br/>
+        </p>
+    <% end %>
+    <form action='/gossips/<%= id%>' method='POST'>
+      Ajoute un commentaire :  <input type='text' name='gossip_comment'/><br/>
+      <input type='submit'/>
+    </form>
     <a href = '/'>Retour à l'acceuil</a>
   </body>
 </html>
