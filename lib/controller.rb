@@ -21,7 +21,7 @@ class ApplicationController < Sinatra::Base
 
 	post '/gossips/:id' do
 		Comment.new(params[:id], params["gossip_comment"]).save
-		redirect '/'
+		erb :gossip, locals: {gossip: Gossip.all[params[:id].to_i], id: params[:id].to_i, comments:Comment.all_with_id(params[:id].to_i)}
 	end
 
 	get '/gossips/:id/edit' do
