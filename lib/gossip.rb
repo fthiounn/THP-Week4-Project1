@@ -1,7 +1,6 @@
 #Cette classe représente un gossip, elle est définie par son auteur, son contenu et sa place dans le fichier csv
 class Gossip
 	attr_accessor :author, :content
-
 	def initialize (author, content)
 		@author = author
 		@content = content
@@ -9,7 +8,7 @@ class Gossip
 	#sauvegarde l'instance dans le fichier csv
 	def save
 	  CSV.open("./db/gossip.csv", "ab") do |csv|
-	    csv << [@author,@content]
+	    csv << [@author, @content]
 	  end
 	end
 	#renvoie une liste de tous les gossip
